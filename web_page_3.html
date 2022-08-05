@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complexity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Bree+Serif&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-position: center;
+            height:100vh;
+            box-sizing: border-box;
+        }
+        
+        #home::before{
+            content: "";
+            background-image: url('Img/dsa2.jpg');
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 680px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.2;
+        }
+        #contact::before{
+            content: "";
+            background-image: url('Img/time.png');
+            position: absolute;
+            top: 680px;
+            /* left: 0; */
+            height: 600px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 2px;
+            margin: 0px;
+            border-radius: 16px;
+            background-color: grey;
+        }
+
+        #logo img {
+            margin: 13px 30px;
+            height: 60px;
+            width: 60px;
+        }
+        h1{
+            display: flex;
+            align-items: center;
+        }
+        h1 img{
+            margin: 13px 30px;
+            height: 50px;
+            width: 50px;
+            opacity: 0.7.5;
+        }
+        ul {
+            list-style-type: none;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+            margin: 0 px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            color: black;
+        }
+
+        li a:hover {
+            background-color: black;
+            color:white;
+            border: solid black 2px;
+        }
+
+        ul li {
+            font-weight: bold;
+            font-size: 25px;
+            display: inline;
+            padding: 25px;
+            margin: 25px;
+        }
+
+        div h1 {
+            text-align: center;
+
+        }
+
+        .para {
+            font-family: sans-serif;
+            font-size: 23px;
+            text-align: justify;
+            color: black;
+        }
+
+        table#declare {
+            text-align: center;
+            border-radius: 12px;
+            height: 50px;
+        }
+
+        div.image {
+            margin: auto;
+            width: 60%;
+            opacity: 0.8;
+        }
+
+        table.center {
+            /* margin: auto; */
+            font-size: 20px;
+            background-color: rgb(199 198 203);
+            border-radius: 2px;
+            /* border: solid black 2px; */
+            border-radius: 12px;
+        }
+
+        footer#link {
+            text-align: justify;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div id="logo"><img src="Img/logo.jpg" alt="logo"></div>
+        <ul>
+            <li><a href="Home.asp">Home</a> </li>
+            <li><a href="contact.asp">contact us</a></li>
+            <li><a href="About.asp">About</a></li>
+            <li><a href="Help.asp">Help</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h1>Understanding Time Complexity <img src="Img/watch.jpg" alt="time Complexity"></h1>
+    </div>
+    <section id="home">
+    <div>
+        <p class="para">In computer science, the time complexity is the computational complexity that describes the amount<br> of computer time it takes to run an algorithm. We donate it with Big Oh notation O(1) (readed as Big<br> Oh of time complexity 1). <br>The worst to best time complexity can be arranged like this. </p>
+        
+        <div class="image"><img src="Img/complexity.png" alt="string"></div>
+
+        <li class="para">From the above graph we can easily understand about best and worst time complexity and thus <br>we can conclude that less the time complexity of the algorithm is more effecient our algorithm is. </li><br>
+        <h1 class="para">Understanding Space Complexity</h1>
+        <p class="para">Space Complexity of an algorithm is the total space taken by the algorithm with respect to <br>the input size. Space complexity includes both Auxiliary space and space used by input. </p>
+    </div>
+</section>
+
+    <section id="contact">
+    <div>
+        <table border="0" cellpadding="0" cellspacing="0" class="center" style="margin: auto;">
+            <tbody>
+                <tr>
+                    <td width="600px">
+                        <div>&nbsp;</div>
+                        <div>&nbsp &nbsp &nbsp &nbsp &nbsp int addSequence (int n){ </div>
+                            <div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp int sum = 0;</div>
+                            <div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  for (int i = 0; i < n; i++){ </div>
+                                <div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sum += pairSum(i, i+1);</div>
+                                <div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</div>
+                                <div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp return sum;</div>
+                                <div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp &nbsp &nbsp &nbsp &nbsp int pairSum(int x, int y){</div>
+                                    <div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp return x + y;</div>
+                                    <div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</div>
+                                    
+                                    <div>&nbsp &nbsp &nbsp &nbsp &nbsp There will be roughly O(n) calls to pairSum. However, those </div>
+                                    <div>&nbsp &nbsp &nbsp &nbsp &nbsp calls do not exist simultaneously on the call stack,</div>
+                                    <div>&nbsp &nbsp &nbsp &nbsp &nbsp  so you only need O(1) space.</div>
+                                    <div>&nbsp;</div>
+                                </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+    <footer id="link">
+        <p style="text-align: left;"><b>To learn more about Complexity</b><a href="https://en.wikipedia.org/wiki/Computational_complexity"
+            target="__blank"> click here</a>
+        <span style="float:right;"><b>To be part of our family</b><a href="file:///E:/Projects/web_page_4.html"
+            target="__blank"> click here</a></span>
+            </p>
+        <div style="text-align: center;">
+            <b>copyright &copy www.dsacourse.com All right reversed</b>
+        </div>
+    </footer>
+</body>
+
+</html>
